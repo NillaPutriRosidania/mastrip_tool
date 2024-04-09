@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1b7160ee-5659-425c-8af7-9594af80cd2d">
+	<property name="ireport.zoom" value="0.7513148009015782"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     akun_karyawan.`username` AS akun_karyawan_username,
+     akun_karyawan.`password` AS akun_karyawan_password,
+     data_karyawan.`kode_karyawan` AS data_karyawan_kode_karyawan,
+     data_karyawan.`nama` AS data_karyawan_nama,
+     data_karyawan.`alamat` AS data_karyawan_alamat,
+     data_karyawan.`no_hp` AS data_karyawan_no_hp
+FROM
+     `akun_karyawan` akun_karyawan INNER JOIN `data_karyawan` data_karyawan ON akun_karyawan.`username` = data_karyawan.`kode_karyawan`]]>
+	</queryString>
+	<field name="akun_karyawan_username" class="java.lang.String"/>
+	<field name="akun_karyawan_password" class="java.lang.String"/>
+	<field name="data_karyawan_kode_karyawan" class="java.lang.String"/>
+	<field name="data_karyawan_nama" class="java.lang.String"/>
+	<field name="data_karyawan_alamat" class="java.lang.String"/>
+	<field name="data_karyawan_no_hp" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="67" splitType="Stretch">
+			<rectangle>
+				<reportElement x="26" y="0" width="745" height="67" backcolor="#3A26F9" uuid="f6ff9107-cad2-4a69-888c-7c8899edf734"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="255" y="16" width="312" height="39" uuid="a2f60283-ef7f-4275-a132-61a025db1fb9"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA KARYAWAN]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="34" y="16" width="100" height="20" uuid="1b7a92d8-defd-458e-bc5d-83199212fb38"/>
+				<text><![CDATA[Username]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="155" y="16" width="100" height="20" uuid="1537b4b4-fa1d-4e9c-ab5c-9a728ba6d5a6"/>
+				<text><![CDATA[Password]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="16" width="100" height="20" uuid="a1948717-988a-4817-9d40-77a8a599e3a8"/>
+				<text><![CDATA[Kode_karyawan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="406" y="16" width="100" height="20" uuid="e7d39238-cb89-4168-b86b-973b8ec65d86"/>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="533" y="16" width="100" height="20" uuid="6733e915-bcf2-41d4-9484-9f585e435903"/>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="663" y="16" width="100" height="20" uuid="68ebedfe-19b8-44cc-bde7-6736e35fb7f2"/>
+				<text><![CDATA[No_hp]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<rectangle>
+				<reportElement x="26" y="0" width="745" height="20" backcolor="#CCCCFF" uuid="96fc5e34-8de0-4b6a-bd94-c9ff3c075137"/>
+			</rectangle>
+			<textField>
+				<reportElement x="34" y="0" width="100" height="20" uuid="054b07c9-3224-4283-b52b-fac9bfc2b480"/>
+				<textFieldExpression><![CDATA[$F{akun_karyawan_username}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="155" y="0" width="100" height="20" uuid="45c5e29f-3e43-4a6a-8d2a-ca3dd117d15d"/>
+				<textFieldExpression><![CDATA[$F{akun_karyawan_password}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="100" height="20" uuid="e2d31b1c-8a5a-4a57-8b8c-b9afc9ae7a10"/>
+				<textFieldExpression><![CDATA[$F{data_karyawan_kode_karyawan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="406" y="0" width="100" height="20" uuid="17e54b04-7dc3-4e76-a842-1e59b03b404e"/>
+				<textFieldExpression><![CDATA[$F{data_karyawan_nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="533" y="0" width="100" height="20" uuid="f4fa9adf-dc75-4377-95c7-1be750fa4af9"/>
+				<textFieldExpression><![CDATA[$F{data_karyawan_alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="663" y="0" width="100" height="20" uuid="b8769ca4-c914-4034-980c-9411a1f3d613"/>
+				<textFieldExpression><![CDATA[$F{data_karyawan_no_hp}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<rectangle>
+				<reportElement x="26" y="25" width="745" height="20" backcolor="#CCCCFF" uuid="9f4c8b87-282d-4c03-880a-b7fd88c75055"/>
+			</rectangle>
+			<textField>
+				<reportElement x="678" y="25" width="80" height="20" uuid="4c13b9b6-3eed-4c7c-9df5-60e869137545"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="758" y="25" width="13" height="20" uuid="6ebfb9b5-4b90-45e3-8863-54b6537365b9"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
